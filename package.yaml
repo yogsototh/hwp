@@ -1,0 +1,72 @@
+name: hwp
+version: '0.1.0.0'
+category: Test
+author:              Yann Esposito
+maintainer:          yann.esposito@gmail.com
+copyright:           © 2017 Yann Esposito
+github:              yogsototh/hwp
+license: ISC
+extra-source-files:
+- README.md
+- stack.yaml
+default-extensions:
+- OverloadedStrings
+- NoImplicitPrelude
+ghc-options:
+- -Wall
+- -Werror
+- -O2
+dependencies:
+- base >=4.8 && <5
+- protolude
+library:
+  source-dirs: src
+  exposed-modules:
+  - Lib
+executables:
+  hwp-exe:
+    main: Main.hs
+    source-dirs: src-exe
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hwp
+tests:
+  hwp-doctest:
+    main: Main.hs
+    source-dirs: src-doctest
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - doctest >=0.10
+    - Glob >=0.7
+    - QuickCheck >=2.5
+    - hwp
+  hwp-test:
+    main: Main.hs
+    source-dirs: src-test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - tasty >=0.11
+    - tasty-hunit >=0.9
+    - tasty-smallcheck >=0.8
+    - hwp
+benchmarks:
+  hwp-benchmark:
+    main: Main.hs
+    source-dirs: src-benchmark
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - criterion >=1.1
+    - hwp
+stability: alpha (experimental)
