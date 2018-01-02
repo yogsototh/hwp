@@ -1,10 +1,10 @@
-name: hwp
+name: guess
 version: '0.1.0.0'
 category: Test
 author:              Yann Esposito
 maintainer:          yann.esposito@gmail.com
-copyright:           © 2017 Yann Esposito
-github:              yogsototh/hwp
+copyright:           © 2018 Yann Esposito
+github:              yogsototh/guess
 license: ISC
 extra-source-files:
 - README.md
@@ -24,7 +24,7 @@ library:
   exposed-modules:
   - Lib
 executables:
-  hwp-exe:
+  guess-exe:
     main: Main.hs
     source-dirs: src-exe
     ghc-options:
@@ -32,9 +32,9 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - hwp
+    - guess
 tests:
-  hwp-doctest:
+  guess-doctest:
     main: Main.hs
     source-dirs: src-doctest
     ghc-options:
@@ -45,8 +45,8 @@ tests:
     - doctest >=0.10
     - Glob >=0.7
     - QuickCheck >=2.5
-    - hwp
-  hwp-test:
+    - guess
+  guess-test:
     main: Main.hs
     source-dirs: src-test
     ghc-options:
@@ -57,9 +57,9 @@ tests:
     - tasty >=0.11
     - tasty-hunit >=0.9
     - tasty-smallcheck >=0.8
-    - hwp
+    - guess
 benchmarks:
-  hwp-benchmark:
+  guess-benchmark:
     main: Main.hs
     source-dirs: src-benchmark
     ghc-options:
@@ -68,5 +68,5 @@ benchmarks:
     - -with-rtsopts=-N
     dependencies:
     - criterion >=1.1
-    - hwp
+    - guess
 stability: alpha (experimental)

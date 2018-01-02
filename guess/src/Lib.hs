@@ -1,7 +1,7 @@
 {- |
 Module      : Lib
 Description : Example of a library file.
-Copyright   : (c) 2017, Yann Esposito
+Copyright   : (c) 2018, Yann Esposito
 License     : ISC
 Maintainer  : yann.esposito@gmail.com
 Stability   : experimental

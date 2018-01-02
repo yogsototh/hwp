@@ -1,4 +1,4 @@
-hwp
+guess
 ==========
 
 New Haskell project using stack template `hwp`.
