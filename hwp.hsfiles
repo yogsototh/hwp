@@ -107,8 +107,8 @@ import Protolude
 --  prop> succ x == inc x
 --  prop> inc (negate x) == negate (pred x)
 --
-inc :: Num a => a -- ^ value to increment
-             -> a -- ^ result
+inc :: Int -- ^ value to increment
+       -> Int -- ^ result
 inc x = x + 1
 
 {-# START_FILE src-exe/Main.hs #-}
@@ -117,7 +117,7 @@ import Protolude
 import Lib (inc)
 
 main :: IO ()
-main = print . inc $ (41 :: Int)
+main = print (inc 41)
 
 {-# START_FILE Setup.hs #-}
 import Distribution.Simple

@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 06922e246c8481370f673700da9ea7767c30490448ef5a97b7a43bb28fe8d937
+-- hash: 03d70f5a6be06635113793430fa21caa3c0766706d9eee0a561507d82cd760ca
 
 name:           guess
 version:        0.1.0.0
@@ -20,6 +20,7 @@ cabal-version:  >= 1.10
 
 extra-source-files:
     README.md
+    stack.yaml
 
 source-repository head
   type: git

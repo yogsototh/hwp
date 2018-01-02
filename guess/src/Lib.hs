@@ -33,6 +33,6 @@ import Protolude
 --  prop> succ x == inc x
 --  prop> inc (negate x) == negate (pred x)
 --
-inc :: Num a => a -- ^ value to increment
-             -> a -- ^ result
+inc :: Int -- ^ value to increment
+       -> Int -- ^ result
 inc x = x + 1
