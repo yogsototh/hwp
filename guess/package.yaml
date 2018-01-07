@@ -21,8 +21,6 @@ dependencies:
 - protolude
 library:
   source-dirs: src
-  exposed-modules:
-  - Lib
 executables:
   guess-exe:
     main: Main.hs

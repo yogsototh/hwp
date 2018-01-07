@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 03d70f5a6be06635113793430fa21caa3c0766706d9eee0a561507d82cd760ca
+-- hash: b0bd48edc90ce1eed0fa5dbe1b4f6f321e28b02044e8d324cfe04b67c5839142
 
 name:           guess
 version:        0.1.0.0
@@ -35,6 +35,7 @@ library
       base >=4.8 && <5
     , protolude
   exposed-modules:
+      Guess
       Lib
   other-modules:
       Paths_guess

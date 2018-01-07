@@ -22,8 +22,6 @@ dependencies:
 - protolude
 library:
   source-dirs: src
-  exposed-modules:
-  - Lib
 executables:
   {{ name }}-exe:
     main: Main.hs

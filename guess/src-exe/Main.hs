@@ -1,6 +1,8 @@
 import Protolude
 
-import Lib (inc)
+import Guess (guess)
 
 main :: IO ()
-main = print (inc 41)
+main = do
+  guess
+  putText "Bye!"
