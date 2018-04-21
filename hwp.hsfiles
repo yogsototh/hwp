@@ -11,10 +11,15 @@ extra-source-files:
 - README.md
 - stack.yaml
 default-extensions:
-- OverloadedStrings
-- NoImplicitPrelude
+  - OverloadedStrings
+  - NoImplicitPrelude
+  - ScopedTypeVariables
 ghc-options:
 - -Wall
+- -Wcompat
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+- -Wnoncanonical-monad-instances
 - -Werror
 - -O2
 dependencies:
@@ -197,6 +202,13 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+{-# START_FILE .hlint.yaml #-}
+- ignore: {name: Use String}
+- error: {lhs: foldl x, rhs: foldl' x}
+- error: {lhs: modifyTVar x, rhs: modifyTVar' x}
+- error: {lhs: atomicModifyIORef x, rhs: atomicModifyIORef' x}
+- group: {name: generalise, enabled: true}
 
 {-# START_FILE README.md #-}
 {{ name }}
