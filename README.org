@@ -1,0 +1,11 @@
+#+Title: README for Haskell for the Working Programmer
+#+Author: Yann Esposito
+
+* Haskell for the Working Programmer
+
+This repository contains many resources associated with the book Haskell for the
+Working Programmer.
+
+- a project template that can be used by stack
+- the =part1= contains most examples that are self contained haskell scripts
+- the =part2= contains all example projects
